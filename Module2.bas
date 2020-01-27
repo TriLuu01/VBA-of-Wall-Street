@@ -33,13 +33,13 @@ Sub AllStocksAnalysis()
 
         'loop over all the rows
         For j = 2 To RowCount
-            'getting data for starting price array
+'getting data for starting price array and tickers array
             If Cells(j - 1, 1).Value <> Cells(j, 1).Value Then
                 tickers(tickerIndex) = Cells(j, 1).Value
                 startingPrice(tickerIndex) = Cells(j, 6).Value
 
             End If
-            
+'getting data for total volume array
             If Cells(j, 1).Value = tickers(tickerIndex) Then
                 TotalVolume(tickerIndex) = TotalVolume(tickerIndex) + Cells(j, 8).Value
                
